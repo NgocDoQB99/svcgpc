@@ -1,0 +1,52 @@
+body { margin:0; font-family: Arial, sans-serif; background:#ffffff; text-align:center; }
+.navbar { position:fixed; top:0; width:100%; background:#d30808; padding:10px 0; z-index:1000; }
+.navbar ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:20px; }
+.navbar a { color:#ffffff; text-decoration:none; font-weight:bold; transition:color 0.3s; }
+.navbar a:hover { color:#f5e023; }
+.banner { position:relative; width:100%; height:200px; overflow:visible; margin-top:0; }
+.slides { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transition:opacity 1.5s ease-in-out; z-index:1; }
+.slides.active { opacity:1; z-index:1; }
+.slides img { width:100%; height:100%; object-fit:cover; }
+.logo-wrapper { position:absolute; bottom:-60px; left:50%; transform:translateX(-50%); z-index:10; width:120px; height:120px; }
+.logo { width:100%; height:100%; border-radius:50%; border:5px solid #ffffff; object-fit:cover; transition:transform 0.3s ease; }
+.logo:hover { transform:scale(1.2); }
+header { margin-top:80px; }
+header h1 { margin:10px 0; color:#333; }
+.slogan { font-style:italic; color:#666; }
+.about { padding:10px; }
+.about-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
+.card { background:#c9d9df; border-radius:12px; box-shadow:0 10px 12px rgba(0,0,0,0.1); overflow:hidden; width:300px; transition:transform 0.3s; }
+.card img { width:100%; height:250px; object-fit:cover; }
+.card p { padding:1px; text-align:justify; }
+.card:hover { transform:translateY(-5px); }
+.register { background:#b3dbe7; margin:20px auto; padding:20px; border-radius:12px; width:90%; max-width:500px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:left; }
+.register h2 { text-align:center; }
+.register input, .register select, .register button { width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:14px; }
+.register button { background:#007bff; color:white; border:none; cursor:pointer; transition:background 0.3s ease; }
+.register button:hover { background:#0056b3; }
+.secondary-btn { width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #007bff; background:#fff; color:#007bff; cursor:pointer; transition:all 0.3s ease; }
+.secondary-btn:hover { background:#007bff; color:#fff; }
+#result { margin-top:15px; font-weight:bold; text-align:center; }
+#listSection { margin-top:20px; padding:15px; background:#f1f1f1; border-radius:10px; }
+#registerList { text-align:left; overflow-x:auto; }
+#registerList table { width:100%; border-collapse:collapse; margin-top:10px; }
+#registerList th, #registerList td { border:1px solid #ccc; padding:8px; text-align:center; }
+#registerList th { background:#007bff; color:#fff; font-weight:bold; }
+#registerList tr:hover { background-color:#e0f0ff; }
+.contact { display:flex; justify-content:center; align-items:center; min-height:80vh; background:#f0f8ff; padding:20px; box-sizing:border-box; text-align:center; }
+.contact-wrapper { display:flex; flex-direction:column; align-items:center; }
+.contact-card { background:#b3dbe7; padding:15px; border-radius:12px; width:300px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center; }
+.contact-card .fb-page { max-width:100%; width:300px; height:200px; margin:0 auto; }
+.contact-card .leader { font-weight:bold; color:red; margin-top:15px; font-size:16px; line-height:1.5; text-align:center; }
+.contact-card a { color:#007bff; text-decoration:none; }
+.contact-card a:hover { text-decoration:underline; }
+footer { margin-top:1px; padding:1px; background:#f80000; color:#0f0101; text-align:center; cursor:pointer; }
+footer a { color:#ffffff; text-decoration:none; }
+.about-article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

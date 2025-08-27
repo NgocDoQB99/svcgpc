@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVCG Phú Cường</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#register">Ghi danh</a></li>
+      <li><a href="#listSection">Danh sách</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+  </nav>
+  <section class="banner">
+    <div class="slides active"><img src="images/anh1.jpg" alt="Banner 1"></div>
+    <div class="slides"><img src="images/anh2.jpg" alt="Banner 2"></div>
+    <div class="slides"><img src="images/anh3.jpg" alt="Banner 3"></div>
+    <div class="logo-wrapper"><img src="images/logo.jpg" class="logo" alt="Logo SVCG"></div>
+  </section>
+  <header>
+    <h1>Nhóm Sinh Viên Công Giáo Phú Cường</h1>
+    <p class="slogan">Đức Tin - Tri Thức - Phục Vụ</p>
+  </header>
+  <main>
+    <section class="about" id="about">
+      <h2>Giới thiệu</h2>
+      <div class="about-cards">
+        <div class="card">
+          <img src="images/anh2.jpg" alt="Sinh viên">
+         <p class="lead">Bạn là sinh viên xa nhà? Bạn đang tìm một nơi để gặp gỡ, chia sẻ, và nâng đỡ nhau trong hành trình học tập cũng như đời sống đức tin?</p>
+        👉 <strong>Hãy đến với Nhóm Sinh viên Công giáo Phú Cường</strong> – ngôi nhà chung dành cho những tâm hồn trẻ khao khát sống và lớn lên trong tình yêu Thiên Chúa.
+        </div>
+        <div class="card">
+          <img src="images/anh3.jpg" alt="Sinh hoạt nhóm">
+        <p>✨<strong>Ở đây, bạn sẽ được:</strong><br>
+          📅 <strong>Sinh hoạt & giao lưu</strong> sau Thánh lễ 19h00 Chúa Nhật hằng tuần.<br>
+          🕯️ <strong>Chầu Thánh Thể</strong> — cùng nhau tìm lại bình an và sự thinh lặng trong Chúa.<br>
+          🚶‍♂️🚶‍♀️ <strong>Tham gia chương trình mục vụ, hành hương</strong> để sống và lan tỏa niềm tin.<br>
+         🤝 <strong>Gặp gỡ bạn bè mới</strong>, cùng nhau học hỏi, hỗ trợ trong học tập, công việc và đời sống thiêng liêng.</p>
+        </div>
+        <div class="card">
+          <img src="images/anh4.jpg" alt="Sinh hoạt nhóm">
+          <p >🙏Dưới sự cầu bầu của <strong>Thánh Phanxicô Xaviê</strong>, nhóm luôn mong đón chào những người trẻ nhiệt thành, sẵn sàng cùng nhau tiến bước và trưởng thành trong đức tin cũng như tình huynh đệ.</p>
+          🌟Đừng ngần ngại, hãy đến và trở thành một phần của gia đình <strong>Nhóm Sinh viên Công giáo Phú Cường</strong>.<span class="heart">💖</span></p>
+        </div>
+      </div>
+    </section>
+    <section class="register" id="register">
+      <h2>Ghi danh Tân sinh viên</h2>
+      <form id="registerForm">
+        <input type="text" id="name" name="name" placeholder="Tên Thánh - Họ và Tên" required minlength="10">
+        <input type="date" id="birthday" name="birthday" placeholder="Ngày tháng năm sinh" min="1990-01-01" max="2010-12-31" required>
+        <input type="text" id="address" name="address" placeholder="Chỗ ở hiện tại" required minlength="20">
+        <input type="text" id="hometown" name="hometown" placeholder="Quê quán" required minlength="20">
+        <select id="roleSelect" name="role" required>
+          <option value="">-- Bạn là Sinh Viên hay Người đi làm --</option>
+          <option value="sinhvien">Sinh viên</option>
+          <option value="nguoilam">Người đi làm</option>
+        </select>
+        <div id="studentFields" style="display: none;">
+          <input type="number" id="namthu" name="namthu" placeholder="Sinh viên năm thứ mấy" min="1" max="8">
+          <input type="text" id="truong" name="truong" placeholder="Học tại trường" minlength="15">
+        </div>
+        <input type="text" id="phone" name="phone" placeholder="Số điện thoại + ZALO" required pattern="^\d{1,10}$" title="Chỉ nhập số nguyên tối đa 10 chữ số">
+        <button type="submit">Đăng ký</button>
+      </form>
+      <div id="result"></div>
+      <button id="showListBtn" class="secondary-btn">📋 Ấn để xem danh sách</button>
+      <section id="listSection" style="display:none;">
+        <h3>Danh sách đã đăng ký</h3>
+        <div id="registerList"></div>
+      </section>
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact-wrapper">
+        <h2>Thông tin liên hệ</h2>
+        <div class="contact-card">
+          <div id="fb-root"></div>
+          <div class="fb-page" 
+               data-href="https://www.facebook.com/nhomsvcgphucuong/" 
+               data-tabs="timeline" 
+               data-width="300" 
+               data-height="200" 
+               data-small-header="false" 
+               data-adapt-container-width="true" 
+               data-hide-cover="false" 
+               data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/nhomsvcgphucuong/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/nhomsvcgphucuong/">Nhóm SVCG Phú Cường</a>
+            </blockquote>
+          </div>
+          <p class="leader">
+            Trưởng nhóm: Giuse - Trần Văn Cảnh<br>
+            Số điện thoại: 0123456678
+          </p>
+        </div>
+      </div>
+      <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="FBSDK">
+      </script>
+    </section>
+  </main>
+  <footer>
+    <a href="https://www.facebook.com/ngocdoqb" target="_blank">
+      <p id="footerText">&copy; 2025 Nhóm Sinh Viên Công Giáo Phú Cường</p>
+    </a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
