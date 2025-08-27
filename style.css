@@ -21,7 +21,7 @@ header h1 { margin:10px 0; color:#333; }
 .card:hover { transform:translateY(-5px); }
 .register { background:#b3dbe7; margin:20px auto; padding:20px; border-radius:12px; width:90%; max-width:500px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:left; }
 .register h2 { text-align:center; }
-.register input, .register select, .register button { width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:14px; }
+.register input, .register select, .register button { width: 95%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:14px; }
 .register button { background:#007bff; color:white; border:none; cursor:pointer; transition:background 0.3s ease; }
 .register button:hover { background:#0056b3; }
 .secondary-btn { width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #007bff; background:#fff; color:#007bff; cursor:pointer; transition:all 0.3s ease; }
