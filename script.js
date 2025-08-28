@@ -1,4 +1,4 @@
-// URL Google Apps Script của bạn
+
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgjamFzIktRdQ_sgG1XxFrLJYg3mMCb7xmwfjgf35zgLU0L5MVZcPLz2u318SKrtB7Qg/exec";
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registerForm");
