@@ -1,114 +1,149 @@
-<!DOCTYPE html> 
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SVCG Phú Cường</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVCG Phú Cường | Đức Tin - Tri Thức - Phục Vụ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">Giới thiệu</a></li>
-      <li><a href="#register">Ghi danh</a></li>
-      <li><a href="#listSection">Danh sách</a></li>
-      <li><a href="#contact">Liên hệ</a></li>
-    </ul>
-  </nav>
-  <section class="banner">
-    <div class="slides active"><img src="images/anh1.jpg" alt="Banner 1"></div>
-    <div class="slides"><img src="images/anh2.jpg" alt="Banner 2"></div>
-    <div class="slides"><img src="images/anh3.jpg" alt="Banner 3"></div>
-    <div class="logo-wrapper"><img src="images/logo.jpg" class="logo" alt="Logo SVCG"></div>
-  </section>
-  <header>
-    <h1>Nhóm Sinh Viên Công Giáo Phú Cường</h1>
-    <p class="slogan">Đức Tin - Tri Thức - Phục Vụ</p>
-  </header>
-  <main>
-    <section class="about" id="about">
-      <h2>Giới thiệu</h2>
-      <div class="about-cards">
-        <div class="card">
-          <img src="images/anh2.jpg" alt="Sinh viên">
-         <p class="lead">Bạn là sinh viên xa nhà? Bạn đang tìm một nơi để gặp gỡ, chia sẻ, và nâng đỡ nhau trong hành trình học tập cũng như đời sống đức tin?</p>
-        👉 <strong>Hãy đến với Nhóm Sinh viên Công giáo Phú Cường</strong> – ngôi nhà chung dành cho những tâm hồn trẻ khao khát sống và lớn lên trong tình yêu Thiên Chúa.
+
+    <!-- Particle Effects Container -->
+    <div id="tsparticles"></div>
+
+    <div class="top-bar">
+        <p id="rotating-text">Nhóm Sinh viên công giáo phú cường</p>
+    </div>
+
+    <header>
+        <div class="header-slideshow">
+            <img src="images/anh1.jpg" alt="Background Image 1" class="active">
+            <img src="images/anh2.jpg" alt="Background Image 2">
+            <img src="images/anh3.jpg" alt="Background Image 3">
+            <img src="images/anh4.jpg" alt="Background Image 4">
         </div>
-        <div class="card">
-          <img src="images/anh3.jpg" alt="Sinh hoạt nhóm">
-        <p>✨<strong>Ở đây, bạn sẽ được:</strong><br>
-          📅 <strong>Sinh hoạt & giao lưu</strong> sau Thánh lễ 19h00 Chúa Nhật hằng tuần.<br>
-          🕯️ <strong>Chầu Thánh Thể</strong> — cùng nhau tìm lại bình an và sự thinh lặng trong Chúa.<br>
-          🚶‍♂️🚶‍♀️ <strong>Tham gia chương trình mục vụ, hành hương</strong> để sống và lan tỏa niềm tin.<br>
-         🤝 <strong>Gặp gỡ bạn bè mới</strong>, cùng nhau học hỏi, hỗ trợ trong học tập, công việc và đời sống thiêng liêng.</p>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo1.png" alt="Logo Đồng Hành 1" class="logo-side">
+                <img src="images/logo.jpg" alt="Logo SVCG Phú Cường" class="logo-main">
+                <img src="images/logo2.jpg" alt="Logo Đồng Hành 2" class="logo-side">
+            </div>
+            <h1 class="header-title">Sinh Viên Công Giáo Phú Cường</h1>
+            <p class="tagline">Đức Tin - Tri Thức - Phục Vụ</p>
         </div>
-        <div class="card">
-          <img src="images/anh4.jpg" alt="Sinh hoạt nhóm">
-          <p >🙏Dưới sự cầu bầu của <strong>Thánh Phanxicô Xaviê</strong>, nhóm luôn mong đón chào những người trẻ nhiệt thành, sẵn sàng cùng nhau tiến bước và trưởng thành trong đức tin cũng như tình huynh đệ.</p>
-          🌟Đừng ngần ngại, hãy đến và trở thành một phần của gia đình <strong>Nhóm Sinh viên Công giáo Phú Cường</strong>.<span class="heart">💖</span></p>
+    </header>
+
+    <main>
+        
+        <section id="about">
+            <h2>Chào mừng bạn đến với SVCG Phú Cường</h2>
+            <p>Nhóm quy tụ các bạn trẻ kỷ luật – năng động – giàu nhiệt huyết.
+                Chúng mình cùng nhau lớn lên trong Đức Tin, vững vàng trong Tri Thức và lan tỏa tinh thần Phục Vụ.</p>
+        </section>
+
+        <!-- Info Cards Section -->
+        <section id="info-cards">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-praying-hands"></i>
+                    <h3>Đức Tin</h3>
+                    <p>Đặt Chúa làm trọng tâm trong mọi hoạt động.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Tri Thức</h3>
+                    <p>Không ngừng học hỏi, phát triển bản thân.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Phục Vụ</h3>
+                    <p>Sống sẻ chia, lan tỏa yêu thương.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Thánh Phanxicô Xaviê</h3>
+                    <p>Bổn mạng nhóm.</p>
+                </div>
+            </div>
+             <div class="info-grid">
+                <div class="info-card secondary">
+                    <h4>Thời gian hoạt động</h4>
+                    <p>Sau Thánh Lễ Chúa Nhật 19h00 hằng tuần</p>
+                </div>
+                <div class="info-card secondary">
+                    <h4>Địa điểm</h4>
+                    <p>Giáo xứ Chánh Tòa Phú Cường</p>
+                </div>
+                <div class="info-card secondary">
+                    <h4>Đồng hành</h4>
+                    <p>Dưới sự che chở của quý Cha từ Giáo xứ Chánh Tòa</p>
+                </div>
+                <div class="info-card secondary">
+                    <h4>Dòng Hiến Sĩ OMI</h4>
+                    <p>Cùng sự đồng hành của quý tu sĩ dòng OMI</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Khoảnh Khắc SVCG Phú Cường</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/anh1.jpg" alt="Hoạt động nhóm 1"></div>
+                <div class="gallery-item"><img src="images/anh2.jpg" alt="Hoạt động nhóm 2"></div>
+                <div class="gallery-item"><img src="images/anh3.jpg" alt="Hoạt động nhóm 3"></div>
+                <div class="gallery-item"><img src="images/anh4.jpg" alt="Hoạt động nhóm 4"></div>
+                <div class="gallery-item"><img src="images/GL.jpg" alt="Hoạt động nhóm 5"></div>
+                <div class="gallery-item"><img src="images/GL1.jpg" alt="Hoạt động nhóm 6"></div>
+                <div class="gallery-item"><img src="images/HH.jpg" alt="Hoạt động nhóm 7"></div>
+                <div class="gallery-item"><img src="images/hinh5.jpg" alt="Hoạt động nhóm 8"></div>
+                <div class="gallery-item"><img src="images/NK.jpg" alt="Hoạt động nhóm 9"></div>
+                <div class="gallery-item"><img src="images/NK1.jpg" alt="Hoạt động nhóm 10"></div>
+                <div class="gallery-item"><img src="images/SH.jpg" alt="Hoạt động nhóm 11"></div>
+                <div class="gallery-item"><img src="images/SH1.jpg" alt="Hoạt động nhóm 12"></div>
+                 <div class="gallery-item"><img src="images/TN1.jpg" alt="Hoạt động nhóm 13"></div>
+                <div class="gallery-item"><img src="images/TTCTT.jpg" alt="Hoạt động nhóm 15"></div>
+                <div class="gallery-item"><img src="images/TN1.jpg" alt="Hoạt động nhóm 16"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Bản quyền thuộc SVCG Phú Cường</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
-      </div>
-    </section>
-    <section class="register" id="register">
-      <h2>Ghi danh Tân sinh viên</h2>
-      <form id="registerForm">
-        <input type="text" id="name" name="name" placeholder="Tên Thánh - Họ và Tên" required minlength="10">
-        <input type="date" id="birthday" name="birthday" placeholder="Ngày tháng năm sinh" min="1990-01-01" max="2010-12-31" required>
-        <input type="text" id="address" name="address" placeholder="Chỗ ở hiện tại" required minlength="20">
-        <input type="text" id="hometown" name="hometown" placeholder="Quê quán" required minlength="20">
-        <select id="roleSelect" name="role" required>
-          <option value="">-- Bạn là Sinh Viên hay Người đi làm --</option>
-          <option value="sinhvien">Sinh viên</option>
-          <option value="nguoilam">Người đi làm</option>
-        </select>
-        <div id="studentFields" style="display: none;">
-          <input type="number" id="namthu" name="namthu" placeholder="Sinh viên năm thứ mấy" min="1" max="8">
-          <input type="text" id="truong" name="truong" placeholder="Học tại trường" minlength="15">
-        </div>
-        <input type="text" id="phone" name="phone" placeholder="Số điện thoại + ZALO" required pattern="^\d{1,10}$" title="Chỉ nhập số nguyên tối đa 10 chữ số">
-        <button type="submit">Đăng ký</button>
-      </form>
-      <div id="result"></div>
-      <button id="showListBtn" class="secondary-btn">📋 Ấn để xem danh sách</button>
-      <section id="listSection" style="display:none;">
-        <h3>Danh sách đã đăng ký</h3>
-        <div id="registerList"></div>
-      </section>
-    </section>
-    <section class="contact" id="contact">
-      <div class="contact-wrapper">
-        <h2>Thông tin liên hệ</h2>
-        <div class="contact-card">
-          <div id="fb-root"></div>
-          <div class="fb-page" 
-               data-href="https://www.facebook.com/nhomsvcgphucuong/" 
-               data-tabs="timeline" 
-               data-width="300" 
-               data-height="200" 
-               data-small-header="false" 
-               data-adapt-container-width="true" 
-               data-hide-cover="false" 
-               data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/nhomsvcgphucuong/" class="fb-xfbml-parse-ignore">
-              <a href="https://www.facebook.com/nhomsvcgphucuong/">Nhóm SVCG Phú Cường</a>
-            </blockquote>
-          </div>
-          <p class="leader">
-            Trưởng nhóm: Giuse - Trần Văn Cảnh<br>
-            Số điện thoại: 038 934 4263
-          </p>
-        </div>
-      </div>
-      <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="FBSDK">
-      </script>
-    </section>
-  </main>
-  <footer>
-    <a href="https://www.facebook.com/ngocdoqb" target="_blank">
-      <p id="footerText">&copy; 2025 Nhóm Sinh Viên Công Giáo Phú Cường</p>
-    </a>
-  </footer>
-  <script src="script.js"></script>
+    </footer>
+
+    <!-- YouTube Player -->
+    <div id="player"></div>
+
+    <!-- Dock Navigation Menu -->
+    <nav class="dock">
+        <a href="#hero" title="Trang Chủ" id="dock-home"><i class="fa-solid fa-house-chimney"></i></a>
+        <a href="register.html" title="Ghi danh" id="dock-register"><i class="fa-solid fa-file-signature"></i></a>
+        <a href="#" title="SVCG Phú Cường" class="dock-logo">
+            <img src="images/logo.jpg" alt="Logo SVCG Phú Cường">
+        </a>
+        <a href="#gallery" title="Thư viện" id="dock-gallery"><i class="fa-solid fa-images"></i></a>
+        <a href="#about" title="Thông tin" id="dock-info"><i class="fa-solid fa-circle-info"></i></a>
+    </nav>
+
+    <!-- Floating Controls -->
+    <div class="floating-controls">
+        <button id="music-toggle">
+            <i class="fa-solid fa-music"></i>
+        </button>
+        <a href="https://www.facebook.com/nhomsvcgphucuong/" class="floating-chat" target="_blank">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-bundle@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

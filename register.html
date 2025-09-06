@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghi Danh | SVCG Phú Cường</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+    <div class="top-bar"><p id="rotating-text">Nhóm Sinh viên công giáo phú cường</p></div>
+
+    <header>
+        <div class="header-slideshow">
+            <img src="images/anh1.jpg" alt="Background Image 1" class="active">
+            <img src="images/anh2.jpg" alt="Background Image 2">
+            <img src="images/anh3.jpg" alt="Background Image 3">
+            <img src="images/anh4.jpg" alt="Background Image 4">
+        </div>
+        <div class="header-content">
+             <div class="logo-container">
+                <img src="images/logo1.png" alt="Logo Đồng Hành 1" class="logo-side">
+                <img src="images/logo.jpg" alt="Logo SVCG Phú Cường" class="logo-main">
+                <img src="images/logo2.jpg" alt="Logo Đồng Hành 2" class="logo-side">
+            </div>
+            <h1 class="header-title">Sinh Viên Công Giáo Phú Cường</h1>
+            <p class="tagline">Chung một mái nhà, chung một hành trình</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="registration-form-section">
+            <form id="register-form" class="modern-form">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Ghi Danh Tân Sinh Viên</h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="full-name">Tên Thánh và Họ tên</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="VD: Phêrô Nguyễn Văn An" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Ngày sinh</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="phone">Số điện thoại + Zalo</label>
+                        <input type="tel" id="phone" name="phone" placeholder="VD: 0912345678" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Chỗ ở hiện tại</label>
+                        <input type="text" id="address" name="address" placeholder="VD: Dĩ An, Bình Dương" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hometown">Quê quán</label>
+                        <input type="text" id="hometown" name="hometown" placeholder="VD: Phúc Trạch, Quảng Bình" required>
+                    </div>
+                </div>
+
+                <fieldset class="fieldset full-width form-group">
+                    <legend class="fieldset-legend">Bạn là?</legend>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="user-type" value="student" checked>
+                            <span><i class="fa-solid fa-user-graduate"></i> Sinh viên</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="user-type" value="worker">
+                            <span><i class="fa-solid fa-user-tie"></i> Người đi làm</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div id="student-info" class="form-grid">
+                    <div class="form-group">
+                        <label for="student-year">Sinh viên năm thứ</label>
+                        <input type="number" id="student-year" name="student-year" min="1" max="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="university">Bạn học trường nào?</label>
+                        <input type="text" id="university" name="university" placeholder="VD: Đại học Thủ Dầu Một">
+                    </div>
+                </div>
+
+                <div id="form-status" class="form-status-message"></div>
+
+                <div class="form-group full-width">
+                    <button type="submit" class="submit-btn">Gửi Thông Tin</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="member-list-section">
+             <div style="text-align: center;">
+                <button id="list-toggle-btn" class="list-toggle-btn">Xem Danh Sách Đã Đăng Ký</button>
+            </div>
+            <div id="member-list-container" class="hidden"></div>
+        </section>
+
+    </main>
+
+    <nav class="dock">
+        <a href="index.html" title="Trang Chủ"><i class="fa-solid fa-house-chimney"></i></a>
+        <a href="register.html" title="Ghi danh"><i class="fa-solid fa-file-signature"></i></a>
+        <a href="index.html" title="SVCG Phú Cường" class="dock-logo"><img src="images/logo.jpg" alt="Logo SVCG Phú Cường"></a>
+        <a href="index.html#gallery" title="Thư viện"><i class="fa-solid fa-images"></i></a>
+        <a href="index.html#about" title="Thông tin"><i class="fa-solid fa-circle-info"></i></a>
+    </nav>
+
+    <div id="player"></div>
+    <div class="floating-controls">
+        <button id="music-toggle"><i class="fa-solid fa-music"></i></button>
+        <a href="https://www.facebook.com/nhomsvcgphucuong/" class="floating-chat" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-bundle@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

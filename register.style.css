@@ -1,0 +1,135 @@
+/* --- Universal Box Sizing --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ============================================= */
+/*      STYLING FOR MODERN REGISTRATION PAGE     */
+/* ============================================= */
+
+/* --- Section Wrapper --- */
+#registration-form-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem 2rem;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 800px; 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --- Form Card --- */
+.modern-form {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Form Grid --- */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* --- Form Elements --- */
+.form-group label, .fieldset-legend {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(163, 42, 42, 0.15);
+}
+
+/* --- Custom Radio Buttons --- */
+.fieldset { border: none; padding: 0; margin: 0; }
+.radio-group { display: flex; gap: 1rem; }
+.radio-group label { flex: 1; padding: 14px; border: 1px solid #ddd; border-radius: 10px; cursor: pointer; text-align: center; transition: all 0.3s ease; }
+.radio-group input[type="radio"] { display: none; }
+.radio-group input[type="radio"]:checked + span { color: var(--primary-color); font-weight: 700; }
+.radio-group label:has(input:checked) { border-color: var(--primary-color); background-color: rgba(163, 42, 42, 0.05); box-shadow: 0 2px 8px rgba(163, 42, 42, 0.1); }
+
+/* --- Submit Button --- */
+.submit-btn { width: 100%; padding: 16px; font-size: 1.2rem; font-weight: 700; background: linear-gradient(45deg, var(--primary-color), #c0392b); color: white; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.2s, box-shadow 0.3s; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(192, 57, 43, 0.3); }
+.submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+
+/* --- Student Info Section (Hidden/Visible) --- */
+#student-info { transition: opacity 0.4s ease, transform 0.4s ease; }
+#student-info.hidden { opacity: 0; transform: scaleY(0.9); max-height: 0; overflow: hidden; margin: 0; padding: 0; gap: 0; transition: all 0.4s ease-out; }
+.hidden { display: none !important; }
+
+/* --- Form Status & List Styles --- */
+.form-status-message { padding: 15px; margin-top: 1rem; margin-bottom: 1rem; border-radius: 10px; font-weight: 500; text-align: center; opacity: 0; height: 0; overflow: hidden; transition: all 0.4s ease; }
+.form-status-message.visible { opacity: 1; height: auto; margin-bottom: 1rem; }
+.form-status-message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.form-status-message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+#member-list-section { margin-top: 2rem; text-align: center; }
+.list-toggle-btn { padding: 12px 30px; background: #333; color: #fff; border-radius: 50px; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; }
+.list-toggle-btn:hover { background: #555; }
+
+#member-list-container { background: #ffffff; border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); margin-top: 1.5rem; overflow: hidden; transition: all 0.5s ease; }
+#member-list-container.hidden { max-height: 0; opacity: 0; margin-top: 0; box-shadow: none; }
+
+/* --- Table Wrapper for Scrolling --- */
+.table-wrapper {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+}
+
+/* --- Member Table Styling --- */
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures table has a minimum width, forcing scroll on small screens */
+}
+.member-table th, .member-table td {
+    padding: 16px 22px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center; 
+}
+.member-table th {
+    background-color: #fcfcfc;
+    font-weight: 600;
+    color: #555;
+}
+.member-table tr:last-child td { border-bottom: none; }
+.member-table tr:hover { background-color: #fafafa; }
+
+.list-status-message { padding: 4rem; text-align: center; color: #888; }
+.loading-spinner { border: 5px solid #f3f3f3; border-top: 5px solid #555; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 4rem auto; }
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .form-grid { grid-template-columns: 1fr; }
+    #registration-form-section { padding: 2rem 1rem; }
+    .modern-form { padding: 1.5rem; }
+}
