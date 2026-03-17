@@ -1,0 +1,196 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background: #000;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars,
+.twinkling {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+.stars {
+	background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+	z-index:0;
+}
+
+.twinkling {
+	background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+	z-index:1;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.splash-container {
+  text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Rocket Animation */
+.rocket-container {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.rocket {
+    width: 80px;
+    height: 120px; /* initial height */
+    position: relative;
+    animation: launch 4s ease-in-out forwards;
+}
+
+.rocket-body {
+    width: 80px;
+    height: 100px;
+    background: #f0f0f0;
+    border-radius: 50% 50% 10% 10%;
+    position: absolute;
+    bottom: 0;
+    border: 3px solid #d0d0d0;
+}
+
+.rocket-window {
+    width: 30px;
+    height: 30px;
+    background: #a7d5e8;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #84a2b0;
+}
+
+.rocket-fin {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 10px;
+}
+
+.fin-left {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 25px solid #e25858;
+    left: -20px;
+}
+
+.fin-right {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 25px solid #e25858;
+    right: -20px;
+}
+
+.rocket-flame {
+    width: 30px;
+    height: 0px; /* Initial height */
+    background: linear-gradient(to bottom, #ffda5a, #ff7e24, #e25858);
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flame 0.2s infinite alternate, flame-grow 4s ease-out forwards;
+}
+
+@keyframes launch {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(-10px); }
+    100% { transform: translateY(-500px); opacity: 0; }
+}
+
+@keyframes flame {
+    from { height: 40px; }
+    to { height: 50px; }
+}
+
+@keyframes flame-grow {
+    0% { height: 0; bottom: -10px; }
+    20% { height: 40px; bottom: -50px; }
+    90% { height: 40px; bottom: -50px; opacity: 1; }
+    100% { height: 0; bottom: -10px; opacity: 0; }
+}
+
+
+/* Text and Progress Bar */
+.title {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 5px;
+  transition: width 0.035s linear;
+  box-shadow: 0 0 10px #a6c1ee;
+}
+
+.redirect-info {
+    font-size: 0.8em;
+    color: #bbb;
+}
+
+.redirect-info a {
+    color: #fbc2eb;
+    text-decoration: none;
+    font-weight: 600;
+}
